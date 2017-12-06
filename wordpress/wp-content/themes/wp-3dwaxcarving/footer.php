@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-lg-12">
         <p class="copyright">
-          &copy; <?php echo date("Y"); ?> Собственность <?php bloginfo('name'); ?>.
+          &copy; 2015-<?php echo date("Y"); ?> All Rights Reserved <?php bloginfo('name'); ?>.
         </p><!-- /copyright -->
       </div><!-- /.col-lg-12 -->
     </div><!-- /.row -->

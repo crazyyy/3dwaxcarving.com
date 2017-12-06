@@ -83,8 +83,10 @@ picture {
     max-width: $width;
 }
 
+@include sprites($spritesheet-sprites);
 header {
     padding-top: 45px;
+    padding-bottom: 15px;
     .header-title--title {
         font-size: 24px;
         color: #fff;
@@ -105,6 +107,67 @@ header {
     .header-nav {
         .headnav {
             text-align: right;
+            li {
+                text-align: center;
+                margin: 0 5px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    display: block;
+                    width: 76px;
+                    font-size: 14px;
+                    color: #fff;
+                    &:before {
+                        content: '';
+                        opacity: 0.8;
+                        display: block;
+                    }
+                }
+                &.menu-item-2023 {
+                    a {
+                        &:before {
+                            @include sprite($sprite-nav-home);
+                        }
+                    }
+                }
+                &.menu-item-2022 {
+                    a {
+                        &:before {
+                            @include sprite($sprite-nav-about);
+                        }
+                    }
+                }
+                &.menu-item-2020 {
+                    a {
+                        &:before {
+                            @include sprite($sprite-nav-works);
+                        }
+                    }
+                }
+                &.menu-item-2021 {
+                    a {
+                        &:before {
+                            @include sprite($sprite-nav-contact);
+                        }
+                    }
+                }
+                &.menu-item-2019 {
+                    a {
+                        &:before {
+                            @include sprite($sprite-nav-blog);
+                        }
+                    }
+                }
+                &:hover {
+                    a {
+                        &:before {
+                            opacity: 1;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -120,10 +183,22 @@ nav {
 
 section {
     padding: 0 0 $footer;
+    .page-title {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $gray-light;
+        margin-bottom: 20px;
+        a {
+            color: $gray-light;
+        }
+    }
 }
 
 article {
     @extend .clearfix;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
 .looper {
@@ -133,7 +208,12 @@ article {
 footer {
     height: $footer;
     margin: $footer_margin auto 0;
-    background-color: $gray-light;
+    color: $gray-light;
+    .copyright {
+        margin-bottom: 0;
+        padding-top: 50px;
+        text-align: right;
+    }
 }
 
 @import "import/base64";
