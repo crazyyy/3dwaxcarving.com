@@ -3244,14 +3244,22 @@ header {
   padding-bottom: 15px;
 }
 
+header .header-title a:hover {
+  text-decoration: none;
+}
+
 header .header-title--title {
   font-size: 24px;
-  color: #fff;
+  color: #ffffff;
 }
 
 header .header-title--title a {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
+}
+
+header .header-title--title a:hover {
+  text-decoration: none;
 }
 
 header .header-title--title span {
@@ -3259,10 +3267,10 @@ header .header-title--title span {
 }
 
 header .header-title--description {
-  color: #808680;
-  padding-left: 150px;
   font-size: 14px;
+  padding-left: 150px;
   text-transform: uppercase;
+  color: #808680;
 }
 
 header .header-nav .headnav {
@@ -3270,8 +3278,8 @@ header .header-nav .headnav {
 }
 
 header .header-nav .headnav li {
-  text-align: center;
   margin: 0 5px;
+  text-align: center;
 }
 
 header .header-nav .headnav li:last-child {
@@ -3279,19 +3287,28 @@ header .header-nav .headnav li:last-child {
 }
 
 header .header-nav .headnav li a {
+  font-size: 14px;
   display: block;
   width: 76px;
-  font-size: 14px;
-  color: #fff;
+  color: #ffffff;
 }
 
 header .header-nav .headnav li a:before {
-  content: '';
-  opacity: 0.8;
   display: block;
+  content: '';
+  opacity: .8;
+}
+
+header .header-nav .headnav li.menu-item-2023 a {
+  position: relative;
+  width: 140px;
 }
 
 header .header-nav .headnav li.menu-item-2023 a:before {
+  position: absolute;
+  top: -59px;
+  left: 50%;
+  margin-left: -31px;
   background-image: url(../img/gulp_png_sprite.png);
   background-position: -76px -62px;
   width: 76px;
@@ -3327,8 +3344,12 @@ header .header-nav .headnav li.menu-item-2019 a:before {
 }
 
 header .header-nav .headnav li:hover a:before {
-  opacity: 1;
   transform: scale(1.1);
+  opacity: 1;
+}
+
+header .header-nav .headnav .sub-menu {
+  display: none;
 }
 
 nav ul li {
@@ -3342,9 +3363,9 @@ section {
 section .page-title,
 section .single-title {
   font-size: 18px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   color: #636363;
-  margin-bottom: 20px;
 }
 
 section .page-title a,
@@ -3354,35 +3375,40 @@ section .single-title a {
 
 section .gallery_list--title {
   font-size: 18px;
-  color: #636363;
-  text-align: center;
   margin-bottom: 15px;
+  text-align: center;
+  color: #636363;
 }
 
 section .article-gallery_list {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   margin-bottom: 20px;
-  justify-content: space-between;
   align-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 section .article-gallery_list li {
   display: inline-block;
   width: 23%;
-  text-align: center;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 section .article-gallery_list li:hover {
-  opacity: 0.8;
+  opacity: .8;
 }
 
 article,
 .article-single {
   line-height: 1.4;
+}
+
+article img,
+.article-single img {
+  max-width: 100%;
 }
 
 article a,
@@ -3425,11 +3451,16 @@ article h6,
   font-size: 110%;
 }
 
+article .article-gallery__small,
+.article-single .article-gallery__small {
+  padding-top: 8px;
+}
+
 .ctitle {
   font-size: 18px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   color: #636363;
-  margin-bottom: 20px;
 }
 
 .ctitle a {
@@ -3437,9 +3468,9 @@ article h6,
 }
 
 .looper {
-  margin-bottom: 20px;
-  color: #fff;
   line-height: 1.4;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .looper .inner-title {
@@ -3448,9 +3479,19 @@ article h6,
 }
 
 article {
-  color: #fff;
   font-size: 14px;
   line-height: 1.4;
+  color: #ffffff;
+}
+
+.looper .feature-img {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.looper .feature-img img {
+  max-width: 100%;
 }
 
 footer {
@@ -3473,7 +3514,7 @@ footer .copyright {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 18px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .sidebar .widget ul {
@@ -3482,9 +3523,9 @@ footer .copyright {
 
 .sidebar .widget ul li {
   line-height: 1.4;
-  padding-bottom: 10px;
   margin-bottom: 10px;
-  border-bottom: 1px dashed #fff;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ffffff;
 }
 
 .sidebar .widget ul li a {
@@ -3492,61 +3533,61 @@ footer .copyright {
 }
 
 .sidebar .widget ul li:last-child {
-  padding-bottom: 0;
   margin-bottom: 0;
+  padding-bottom: 0;
   border-bottom: 0;
 }
 
 .sidebar .search {
-  width: 100%;
   position: relative;
+  width: 100%;
   height: 40px;
 }
 
 .sidebar .search input {
   position: absolute;
-  width: calc(100% - 8px);
   top: 0;
-  display: block;
-  margin: 0;
-  left: 0;
-  padding: 4px;
   right: 0;
   bottom: 0;
+  left: 0;
+  display: block;
+  width: calc(100% - 8px);
+  margin: 0;
+  padding: 4px;
+  color: #ffffff;
   border: 1px solid #c7ba9c;
-  color: #fff;
   background-color: #877e69;
 }
 
 .sidebar .search button {
-  width: 60px;
-  border-radius: 0 3px 3px 0;
+  font-size: 26px;
   position: absolute;
+  z-index: 2;
   top: 0;
   right: -1px;
-  z-index: 2;
-  font-size: 26px;
-  color: #fff;
+  bottom: 0;
+  width: 60px;
   padding: 0;
   text-align: center;
-  bottom: 0;
+  color: #ffffff;
+  border-radius: 0 3px 3px 0;
 }
 
 .sidebar .search button:hover {
-  opacity: 0.8;
+  opacity: .8;
 }
 
 .pagination {
+  font-size: 18px;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-size: 18px;
   text-align: center;
 }
 
 .pagination span,
 .pagination a {
-  margin-left: 5px;
   margin-right: 5px;
+  margin-left: 5px;
 }
 
 .pagination .next {
@@ -3559,7 +3600,14 @@ footer .copyright {
 
 .pagination .current {
   font-weight: bold;
-  color: #fff;
+  color: #ffffff;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  width: 100%;
 }
 
 @media (max-width: 992px) {
@@ -3567,9 +3615,9 @@ footer .copyright {
     text-align: center;
   }
   header .header-title--description {
+    display: block;
     padding-left: 0;
     text-align: center;
-    display: block;
   }
   header .header-nav .headnav {
     text-align: center;
@@ -3577,8 +3625,17 @@ footer .copyright {
   .article-gallery__small li {
     display: inline-block;
   }
+  article .article-gallery__small {
+    padding-top: 0;
+  }
   footer .copyright {
     text-align: center;
+  }
+  header .header-nav .headnav li {
+    margin: 0;
+  }
+  header .header-nav .headnav li a {
+    width: 70px;
   }
 }
 
