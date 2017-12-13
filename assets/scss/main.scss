@@ -232,13 +232,11 @@ header {
           width: 180px;
           padding-bottom: 10px;
 
-          background-color: #240a0d;
+   background-color: rgba(45, 42, 42, 0.85);
           a {
             display: block;
-
             width: 100%;
-            padding-top: 5px;
-            padding-bottom: 5px;
+padding: 7px 12px;
             &:before {
               display: none;
             }
@@ -516,6 +514,9 @@ input[type=submit] {
   width: 100%;
 }
 @media (max-width: 992px) {
+        .sub-menu {
+          display: none !important;
+        }
   header .header-title--title {
     text-align: center;
   }

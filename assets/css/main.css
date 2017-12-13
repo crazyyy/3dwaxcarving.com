@@ -3365,14 +3365,13 @@ header .header-nav .headnav .sub-menu li {
   display: block;
   width: 180px;
   padding-bottom: 10px;
-  background-color: #240a0d;
+  background-color: rgba(45, 42, 42, 0.85);
 }
 
 header .header-nav .headnav .sub-menu li a {
   display: block;
   width: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 7px 12px;
 }
 
 header .header-nav .headnav .sub-menu li a:before {
@@ -3643,6 +3642,9 @@ input[type=submit] {
 }
 
 @media (max-width: 992px) {
+  .sub-menu {
+    display: none !important;
+  }
   header .header-title--title {
     text-align: center;
   }
