@@ -133,6 +133,8 @@ header {
     .headnav {
       text-align: right;
       li {
+        position: relative;
+
         margin: 0 5px;
 
         text-align: center;
@@ -208,9 +210,40 @@ header {
             }
           }
         }
+        &.menu-item-has-children {
+          &:hover {
+            .sub-menu {
+              display: block;
+            }
+          }
+        }
       }
       .sub-menu {
+        position: absolute;
+        z-index: 3;
+
         display: none;
+
+        margin-left: -50px;
+        padding-top: 10px;
+        li {
+          display: block;
+
+          width: 180px;
+          padding-bottom: 10px;
+
+          background-color: #240a0d;
+          a {
+            display: block;
+
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            &:before {
+              display: none;
+            }
+          }
+        }
       }
     }
   }
@@ -442,6 +475,11 @@ footer {
       &:hover {
         opacity: .8;
       }
+    }
+  }
+  .textwidget{
+    label {
+      color: #fff;
     }
   }
 }

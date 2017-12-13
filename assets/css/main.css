@@ -3278,6 +3278,7 @@ header .header-nav .headnav {
 }
 
 header .header-nav .headnav li {
+  position: relative;
   margin: 0 5px;
   text-align: center;
 }
@@ -3348,7 +3349,33 @@ header .header-nav .headnav li:hover a:before {
   opacity: 1;
 }
 
+header .header-nav .headnav li.menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+
 header .header-nav .headnav .sub-menu {
+  position: absolute;
+  z-index: 3;
+  display: none;
+  margin-left: -50px;
+  padding-top: 10px;
+}
+
+header .header-nav .headnav .sub-menu li {
+  display: block;
+  width: 180px;
+  padding-bottom: 10px;
+  background-color: #240a0d;
+}
+
+header .header-nav .headnav .sub-menu li a {
+  display: block;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+header .header-nav .headnav .sub-menu li a:before {
   display: none;
 }
 
@@ -3575,6 +3602,10 @@ footer .copyright {
 
 .sidebar .search button:hover {
   opacity: .8;
+}
+
+.sidebar .textwidget label {
+  color: #fff;
 }
 
 .pagination {
