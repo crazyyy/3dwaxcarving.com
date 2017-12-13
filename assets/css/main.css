@@ -3316,7 +3316,7 @@ header .header-nav .headnav li.menu-item-2023 a:before {
   height: 62px;
 }
 
-header .header-nav .headnav li.menu-item-2022 a:before {
+header .header-nav .headnav li.menu-item-2259 a:before {
   background-image: url(../img/gulp_png_sprite.png);
   background-position: 0px 0px;
   width: 76px;
@@ -3534,6 +3534,7 @@ footer .copyright {
 }
 
 .sidebar .widget {
+  color: #fff;
   margin-bottom: 20px;
 }
 

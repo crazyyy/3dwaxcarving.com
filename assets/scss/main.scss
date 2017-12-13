@@ -173,7 +173,7 @@ header {
             }
           }
         }
-        &.menu-item-2022 {
+        &.menu-item-2259 {
           a {
             &:before {
               @include sprite($sprite-nav-about);
@@ -404,6 +404,7 @@ footer {
 
 .sidebar {
   .widget {
+    color: #fff;
     margin-bottom: 20px;
     h6 {
       font-size: 18px;
